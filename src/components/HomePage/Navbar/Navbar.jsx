@@ -1,26 +1,28 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logo from '@/assets/img/logo2.png'
+import logo from "@/assets/img/logo2.png";
 
 const Navbar = () => {
-    const pathname = usePathname();
+  const pathname = usePathname();
   return (
     <div className="mt-4 mb-7 bg-[#D1D8BE30] text-[#424845] shadow-sm px-7 py-2.5 rounded-2xl">
       <nav className="flex justify-between items-center">
         {/* Logo */}
-        <div className="flex gap-2 items-center">
-          <Image
-            src={logo}
-            alt="logo"
-            width={26}
-            height={26}
-            className="object-cover h-auto w-6"
-          />
-          <h3 className="text-[#1A1D14] font-bold text-lg">Tiles Gellary</h3>
-        </div>
+        <Link href="/">
+          <div className="flex gap-2 items-center">
+            <Image
+              src={logo}
+              alt="logo"
+              width={26}
+              height={26}
+              className="object-cover h-auto w-6"
+            />
+            <h3 className="text-[#1A1D14] font-bold text-lg">Tiles Gellary</h3>
+          </div>
+        </Link>
 
         {/* Links */}
         <ul className="hidden md:flex items-center gap-5 text-sm text-gray-700 font-medium">
@@ -50,7 +52,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        
         {/* LogIn Button */}
         <div className="flex items-center gap-3">
           <ul className="hidden md:flex items-center gap-3 text-sm font-medium">

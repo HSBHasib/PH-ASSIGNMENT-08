@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Carrara Marble",
+    "description": "Elegant white marble with subtle grey veining for a timeless look.",
+    "image": "@/assets/img/tiles-1.png",
+    "category": "Marble",
+    "price": 85.50,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Natural Stone",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "title": "Midnight Slate",
+    "description": "Deep charcoal slate with a natural textured finish for modern spaces.",
+    "image": "@/assets/img/tiles-2.png",
+    "category": "Slate",
+    "price": 62.00,
+    "currency": "USD",
+    "dimensions": "30x60 cm",
+    "material": "Natural Slate",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "title": "Azure Mosaic",
+    "description": "Handcrafted glass mosaic tiles in varying shades of Mediterranean blue.",
+    "image": "@/assets/img/tiles-3.png",
+    "category": "Mosaic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "30x30 cm",
+    "material": "Glass",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "title": "Terracotta Earth",
+    "description": "Rustic, warm-toned clay tiles perfect for Mediterranean-style patios.",
+    "image": "@/assets/img/tiles-4.png",
+    "category": "Ceramic",
+    "price": 38.25,
+    "currency": "USD",
+    "dimensions": "40x40 cm",
+    "material": "Clay",
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "title": "Polished Onyx Gold",
+    "description": "Luxurious onyx tile with golden swirls and a high-gloss reflective surface.",
+    "image": "@/assets/img/tiles-5.png",
+    "category": "Luxury",
+    "price": 120.00,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Onyx Stone",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "title": "Industrial Concrete",
+    "description": "Minimalist matte finish porcelain tile mimicking raw industrial concrete.",
+    "image": "@/assets/img/tiles-6.png",
+    "category": "Porcelain",
+    "price": 55.00,
+    "currency": "USD",
+    "dimensions": "60x120 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "title": "Emerald Zellige",
+    "description": "Authentic Moroccan glazed tiles with unique organic imperfections.",
+    "image": "@/assets/img/tiles-7.png",
+    "category": "Handmade",
+    "price": 95.00,
+    "currency": "USD",
+    "dimensions": "10x10 cm",
+    "material": "Glazed Clay",
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "title": "Oak Wood-Plank",
+    "description": "Durable porcelain tiles with a realistic wood grain texture and finish.",
+    "image": "@/assets/img/tiles-8.png",
+    "category": "Wood-Look",
+    "price": 48.75,
+    "currency": "USD",
+    "dimensions": "20x100 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "title": "Art Deco Geometric",
+    "description": "Bold black and white geometric patterns for a statement floor design.",
+    "image": "@/assets/img/tiles-9.png",
+    "category": "Patterned",
+    "price": 70.00,
+    "currency": "USD",
+    "dimensions": "25x25 cm",
+    "material": "Cement",
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "title": "Pearl Subway Tile",
+    "description": "Classic subway tile with a modern iridescent pearlescent glaze.",
+    "image": "@/assets/img/tiles-10.png",
+    "category": "Wall",
+    "price": 32.50,
+    "currency": "USD",
+    "dimensions": "7.5x15 cm",
+    "material": "Ceramic",
+    "inStock": true
+  }
+]
