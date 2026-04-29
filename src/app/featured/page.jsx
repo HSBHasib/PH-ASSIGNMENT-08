@@ -2,13 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { tilesData } from "@/lib/DataFetch";
+import Link from "next/link";
 
 const FeaturedCollections = async () => {
   const tiles = await tilesData();
   const data = tiles.slice(0, 4);
   return (
     <section className="bg-[#EEEFE0] text-[#424845] py-16 px-4 md:px-16">
-     <div>
+      <div>
         {/* Header Section */}
         <div className="flex justify-between items-end mb-9">
           <div>
@@ -19,16 +20,18 @@ const FeaturedCollections = async () => {
               Curated selections for sophisticated interiors
             </p>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-[#1A1D14] font-semibold cursor-pointer active:scale-95 hover:underline transition-all duration-300">
-            View All Collections <ArrowRight size={20} />
-          </button>
+          <Link href="/all-tiles">
+            <button className="hidden md:flex items-center gap-2 text-[#1A1D14] font-semibold cursor-pointer active:scale-95 hover:underline transition-all duration-300">
+              View All Collections <ArrowRight size={20} />
+            </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {data.map((tile) => (
             <div
               key={tile.id}
-              className=" p-5 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 group border-2 border-[#EEEFE090]"
+              className=" p-5 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500"
             >
               {/* Image Container */}
               <div className="relative h-90 w-full rounded-3xl overflow-hidden mb-6">
@@ -36,7 +39,7 @@ const FeaturedCollections = async () => {
                   src={tile.image}
                   alt={tile.title}
                   fill
-                  className="object-contain rounded-3xl"
+                  className="object-contain"
                 />
               </div>
 
