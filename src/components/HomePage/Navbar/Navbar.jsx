@@ -8,7 +8,7 @@ import logo from '@/assets/img/logo2.png'
 const Navbar = () => {
     const pathname = usePathname();
   return (
-    <div className="mt-4 mb-6 bg-[#D1D8BE30] text-[#424845] shadow-sm px-7 py-2.5 rounded-2xl">
+    <div className="mt-4 mb-7 bg-[#D1D8BE30] text-[#424845] shadow-sm px-7 py-2.5 rounded-2xl">
       <nav className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex gap-2 items-center">
@@ -34,7 +34,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              className={`hover:border-b-2 hover:pb-0.75 hover:border-[#4B635B60] ${pathname === "/all-photos" && "border-b-2 pb-0.75 border-[#4B635B]"}`}
+              className={`hover:border-b-2 hover:pb-0.75 hover:border-[#4B635B60] ${pathname === "/all-tiles" && "border-b-2 pb-0.75 border-[#4B635B]"}`}
               href={"/all-tiles"}
             >
               All Tiles
