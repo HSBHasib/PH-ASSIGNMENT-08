@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { IoSearchSharp } from "react-icons/io5";
 
-const TilesCardPage = ({ tiles, searchTerm }) => {
+const TilesCardPage = ({ tiles, filteredTilesCat, searchTerm }) => {
   return (
     <>
       {tiles.length > 0 ? (

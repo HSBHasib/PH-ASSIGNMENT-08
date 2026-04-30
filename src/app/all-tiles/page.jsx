@@ -1,8 +1,14 @@
 import { tilesData } from "@/lib/DataFetch";
 import TilesContainer from "@/components/Cards/TilesContainer";
 
-const AllTilesPage = async () => {
+const AllTilesPage = async ({ searchParams }) => {
   const tiles = await tilesData();
+
+  const { category } = await searchParams;
+  console.log("categoty = ", category);
+
+  const filteredTilesCat = category ? tiles.filter(tile => tile?.category?.toLowerCase() === category?.toLowerCase()) : tiles
+
 
   return (
     <div className="bg-[#EEEFE0] text-[#424845]">
@@ -13,7 +19,7 @@ const AllTilesPage = async () => {
           designed for modern architectural spaces.
         </p>
 
-          {<TilesContainer initialTiles={tiles} />}
+        {<TilesContainer filteredTilesCat={filteredTilesCat} initialTiles={tiles} />}
       </div>
     </div>
   );
