@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const TilesCardPage = ({ tiles }) => {
-  console.log("tiles card = ", tiles);
+  // console.log("tiles card = ", tiles);
   return (
     <>
       {tiles.map((tile) => (

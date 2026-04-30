@@ -5,9 +5,8 @@ import React from "react";
 
 const SingleTailsDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const tiles = await tilesData(id);
-  const targetTiles = tiles.find((tile) => tile.id === Number(id));
-
+  const tiles = await tilesData();
+  const targetTiles = tiles?.find((tile) => Number(tile.id) === Number(id));
   const {
     title,
     description,
@@ -22,7 +21,7 @@ const SingleTailsDetailsPage = async ({ params }) => {
 
   return (
     <div className="min-h-screen py-10 px-6 md:px-30">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start text-[#424845]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start text-[#424845]">
         {/* Left Image */}
         <div className="relative aspect-square w-full h-[95vh] overflow-hidden rounded-4xl shadow-2xl">
           <Image
