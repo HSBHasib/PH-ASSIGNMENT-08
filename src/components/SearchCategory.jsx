@@ -1,7 +1,8 @@
-import { IoSearchSharp } from "react-icons/io5";
-import React from "react";
+'use client'
 
-const SearchCateforyPage = ({ tiles }) => {
+import { IoSearchSharp } from "react-icons/io5";
+const SearchCategoryPage = ({ tiles, setSearchTerm }) => {
+
   return (
     <div className="w-full flex flex-col items-center px-4">
       <div className="w-full max-w-2xl mb-10">
@@ -9,8 +10,9 @@ const SearchCateforyPage = ({ tiles }) => {
           <IoSearchSharp className="text-[#4B635B] mr-2" size={23} />
           <input
             type="text"
-            placeholder="Search by tile title, material, or style..."
-            className="w-full bg-transparent outline-none text-[#42484550] placeholder:text-[#42484550] text-sm md:text-base"
+            placeholder="Search by tiles title..."
+            className="w-full bg-transparent outline-none text-[#424845] placeholder:text-[#4248450] text-sm md:text-base"
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button className="bg-[#4B635B] text-white px-8 py-3 rounded-full font-medium hover:bg-[#3d524b] transition-all active:scale-95 duration-300">
             Search
@@ -35,4 +37,4 @@ const SearchCateforyPage = ({ tiles }) => {
   );
 };
 
-export default SearchCateforyPage;
+export default SearchCategoryPage;
