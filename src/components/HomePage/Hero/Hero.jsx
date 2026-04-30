@@ -23,7 +23,7 @@ const HeroPage = () => {
           organic textures meet modern architectural precision.
         </p>
         <Link href='/all-tiles'>
-          <button className="bg-[#819A91] text-[#081F19] font-bold text-lg px-6 py-3 rounded-lg active:scale-95 cursor-pointer">Browse Now</button>
+          <button className="bg-[#819A91] text-[#081F19] font-bold text-lg px-6 py-3 rounded-lg active:scale-95 cursor-pointer transition-all duration-400">Browse Now</button>
         </Link>
       </div>
     </div>
