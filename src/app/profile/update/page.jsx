@@ -1,7 +1,7 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { Button } from "@heroui/react";
+import { Button, Form, Input } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -55,13 +55,13 @@ const ProfileUpdatePage = () => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit(formHandaler)} className="space-y-5">
+        <Form onSubmit={handleSubmit(formHandaler)} className="space-y-5">
           {/* Name */}
           <div>
             <label className="text-[12px] ml-2 font-bold uppercase tracking-widest text-[#4B635B]">
               Full Name
             </label>
-            <input
+            <Input
               type="text"
               placeholder="Enter your name"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
@@ -82,7 +82,7 @@ const ProfileUpdatePage = () => {
             <label className="text-[12px] ml-2 font-bold uppercase tracking-widest text-[#4B635B]">
               Profile Image URL
             </label>
-            <input
+            <Input
               type="text"
               placeholder="Enter Photo URL"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
@@ -95,24 +95,25 @@ const ProfileUpdatePage = () => {
 
           {/* Submit Button */}
           <div className="flex gap-4 -mt-3">
-            <button
+            <Button
               type='button'
               onClick={() => router.back()}
-              className="w-full cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white font-semibold text-lg py-4 rounded-2xl shadow-lg transition-all active:scale-[0.98] mt-4"
+              className="w-full cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white font-semibold text-lg py-6 rounded-xl shadow-lg transition-all active:scale-[0.98] mt-4"
             >
               Back
-            </button>
-            <button
+            </Button>
+            <Button
               type="submit"
-              className="w-full cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white font-semibold text-lg py-4 rounded-2xl shadow-lg transition-all active:scale-[0.98] mt-4"
+              className="w-full cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white font-semibold text-lg py-6 rounded-xl shadow-lg transition-all active:scale-[0.98] mt-4"
             >
               Save
-            </button>
+            </Button>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   );
 };
 
 export default ProfileUpdatePage;
+

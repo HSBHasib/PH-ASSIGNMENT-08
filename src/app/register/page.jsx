@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
 import { authClient } from "@/lib/auth-client";
-import { Button } from "@heroui/react";
+import { Button, Form, Input } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -10,7 +10,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc"; // npm install react-icons
 import { Bounce, toast } from "react-toastify";
 
-const RegisterForm = () => {
+const RegisterPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const router = useRouter();
 
@@ -74,7 +74,7 @@ const RegisterForm = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-[#1A1D14] tracking-tight">
-            Registration 
+            Registration
           </h1>
           <p className="text-[#4B635B] text-sm mt-2 opacity-80">
             Begin your journey into modern craftsmanship.
@@ -82,13 +82,13 @@ const RegisterForm = () => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit(formHandaler)} className="space-y-5">
+        <Form onSubmit={handleSubmit(formHandaler)} className="space-y-5">
           {/* Name */}
           <div>
             <label className="text-[12px] ml-2 font-bold uppercase tracking-widest text-[#4B635B]">
               Full Name
             </label>
-            <input
+            <Input
               type="text"
               placeholder="Enter your name"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
@@ -109,7 +109,7 @@ const RegisterForm = () => {
             <label className="text-[12px] ml-2 font-bold uppercase tracking-widest text-[#4B635B]">
               Profile Image URL
             </label>
-            <input
+            <Input
               type="text"
               placeholder="Enter Photo URL"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
@@ -125,7 +125,7 @@ const RegisterForm = () => {
             <label className="text-[12px] ml-2 font-bold uppercase tracking-widest text-[#4B635B]">
               Email Address
             </label>
-            <input
+            <Input
               type="email"
               placeholder="Enter your email"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
@@ -135,7 +135,9 @@ const RegisterForm = () => {
               })}
             />
             {errors.email && (
-              <p className="text-red-500 text-[12px] ml-2">Enter a valid email address</p>
+              <p className="text-red-500 text-[12px] ml-2">
+                Enter a valid email address
+              </p>
             )}
           </div>
 
@@ -144,7 +146,7 @@ const RegisterForm = () => {
             <label className="text-[12px] ml-2 font-bold uppercase tracking-widest text-[#4B635B]">
               Password
             </label>
-            <input
+            <Input
               type={isVisible ? "text" : "password"}
               placeholder="Enter your password"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
@@ -175,13 +177,13 @@ const RegisterForm = () => {
           </div>
 
           {/* Submit Button */}
-          <button
+          <Button
             type="submit"
-            className="w-full cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white font-semibold py-4 rounded-2xl shadow-lg transition-all active:scale-[0.98] mt-4"
+            className="w-full text-[16px] cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white py-6 rounded-2xl shadow-lg transition-all active:scale-[0.98] mt-4"
           >
             Register
-          </button>
-        </form>
+          </Button>
+        </Form>
 
         {/* Divider */}
         <div className="relative my-8 mx-6">
@@ -195,21 +197,21 @@ const RegisterForm = () => {
         </div>
 
         {/* Google Sign In */}
-        <button
+        <Button
           onClick={() => googleSignUp()}
-          className="w-full cursor-pointer bg-[#F1F3E9] hover:bg-[#EFF1E4]  border-2 border-[#E8E9DA] py-4 rounded-2xl font-medium text-[#424845] flex items-center justify-center gap-3 transition-all active:scale-[0.98]"
+          className="w-full cursor-pointer bg-[#F1F3E9] hover:bg-[#EFF1E4] border-2 border-[#E8E9DA] py-6 rounded-2xl font-medium text-[#424845] flex items-center justify-center gap-3 transition-all active:scale-[0.98]"
         >
           <FcGoogle size={20} />
           Sign in with Google
-        </button>
+        </Button>
 
         {/* Footer Link */}
         <p className="text-center text-sm text-[#4B635B] mt-4 opacity-80">
           Already have an account?{" "}
-          <Link href='/login'>
-          <button className="font-bold text-[#1A1D14] hover:underline">
-            Log In
-          </button>
+          <Link href="/login">
+            <button className="font-bold text-[#1A1D14] hover:underline">
+              Log In
+            </button>
           </Link>
         </p>
       </div>
@@ -217,4 +219,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default RegisterPage;
