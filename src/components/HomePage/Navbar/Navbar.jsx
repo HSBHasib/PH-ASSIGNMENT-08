@@ -30,8 +30,10 @@ const Navbar = () => {
             <Image
               src={logo}
               alt="logo"
-              width={26}
-              height={26}
+              width={100}
+              height={100}
+              quality={100}
+              priority
               className="object-cover h-auto w-6"
             />
             <h3 className="text-[#1A1D14] font-bold text-lg">Tiles Gellary</h3>
@@ -84,10 +86,10 @@ const Navbar = () => {
                     className="rounded-full w-full h-full object-cover"
                     src={user?.image}
                     alt="profileImg"
-                    width={100} 
-                    height={100} 
-                    quality={100} 
-                    priority 
+                    width={100}
+                    height={100}
+                    quality={100}
+                    priority
                   />
                 </Link>
               </div>
