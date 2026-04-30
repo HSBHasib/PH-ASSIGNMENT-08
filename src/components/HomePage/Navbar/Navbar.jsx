@@ -19,8 +19,6 @@ const Navbar = () => {
   const { data, isPending } = authClient.useSession();
   const user = data?.user;
 
-  console.log("user data is = ", user);
-
   return (
     <div className="mt-4 mb-7 bg-[#D1D8BE30] text-[#424845] shadow-sm px-7 py-2.5 rounded-2xl">
       <nav className="flex justify-between items-center">

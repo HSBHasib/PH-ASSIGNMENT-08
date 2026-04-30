@@ -1,7 +1,7 @@
 'use client'
 
 import { authClient } from "@/lib/auth-client";
-import { Button, Input } from "@heroui/react";
+import { Button, Form, Input } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
