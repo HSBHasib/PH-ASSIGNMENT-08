@@ -12,8 +12,9 @@ import "swiper/css/pagination";
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa";
 
+
 const HeroPage = () => {
-  const imgArray = ["/hero1.png", "/hero2.png", "/hero3.png", "/hero4.png"];
+  const heroImgArr = ["/hr1.png", "/hr2.png", "/hr3.png", "/hr4.png"];
   return (
     <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-2xl">
       {/* Using swiperJS */}
@@ -36,9 +37,9 @@ const HeroPage = () => {
           <div className="swiper-button-next-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer text-[#4B635B] bg-white/80 p-3 rounded-full shadow-lg hover:bg-[#4B635B]/70 hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100">
             <FaChevronLeft />
           </div>
-          
+
           {/* show all image from imgarray to display*/}
-          {imgArray.map((heroimg, idx) => (
+          {heroImgArr.map((heroimg, idx) => (
             <SwiperSlide key={idx}>
               <Image
                 className="w-full h-full rounded-2xl"
@@ -72,4 +73,3 @@ const HeroPage = () => {
 };
 
 export default HeroPage;
-
