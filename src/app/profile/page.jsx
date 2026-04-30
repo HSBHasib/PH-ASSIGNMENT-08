@@ -11,8 +11,14 @@ import { Button } from "@heroui/react";
 const ProfilePage = () => {
   const { data, isPending } = authClient.useSession();
   const user = data?.user;
-
   const router = useRouter();
+
+  if (isPending) {
+    return (
+      <></>
+    );
+  }
+
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4">
@@ -66,11 +72,10 @@ const ProfilePage = () => {
           </div>
 
           <div className="flex pt-3 justify-center md:justify-center">
-            <Link
-              href="/profile/update"
-              className="w-full"
-            >
-              <Button className='bg-[#4B635B] text-white text-[16px] w-full text-center py-6 rounded-full font-semibold shadow-lg hover:bg-[#3d524b] transition-all active:scale-95'>Edit Profile</Button>
+            <Link href="/profile/update" className="w-full">
+              <Button className="bg-[#4B635B] text-white text-[16px] w-full text-center py-6 rounded-full font-semibold shadow-lg hover:bg-[#3d524b] transition-all active:scale-95">
+                Edit Profile
+              </Button>
             </Link>
           </div>
         </div>
