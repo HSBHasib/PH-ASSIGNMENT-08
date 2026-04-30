@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/HomePage/Navbar/Navbar";
 import Footer from "@/components/HomePage/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -22,6 +23,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+
+        <ToastContainer />
       </body>
     </html>
   );

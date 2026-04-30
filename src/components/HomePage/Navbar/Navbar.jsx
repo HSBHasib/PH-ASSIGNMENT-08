@@ -2,11 +2,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import logo from "@/assets/img/logo2.png";
+import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handlesignOut = async () => {
+    await authClient.signOut();
+    router.push('/');
+  };
+
+  const { data, isPending } = authClient.useSession();
+  const user = data?.user;
+
+  console.log("user data is = ", user);
+
   return (
     <div className="mt-4 mb-7 bg-[#D1D8BE30] text-[#424845] shadow-sm px-7 py-2.5 rounded-2xl">
       <nav className="flex justify-between items-center">
@@ -53,13 +67,30 @@ const Navbar = () => {
         </ul>
 
         {/* LogIn Button */}
-        <div className="flex items-center gap-3">
-          <ul className="hidden md:flex items-center gap-3 text-sm font-medium">
-            <li className="bg-[#4B635B] active:scale-95 px-5 py-1.5 text-white rounded-sm font-bold">
-              <Link href={"/auth/login"}>LogIn</Link>
-            </li>
-          </ul>
-        </div>
+        {!user ? (
+          <div className="flex items-center gap-3">
+            <ul className="hidden md:flex items-center gap-3 text-sm font-medium">
+              <li className="bg-[#4B635B] active:scale-95 px-5 py-1.5 text-white rounded-sm font-bold">
+                <Link href={"/login"}>LogIn</Link>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <>
+            <div className="flex items-center gap-3">
+              <Avatar
+                  src={user.image}
+                  name={user?.name?.charAt(0).toUpperCase()}
+                  size="sm"
+                />
+              <ul className="hidden md:flex items-center gap-3 text-sm font-medium">
+                <li className="bg-[#4B635B] active:scale-95 px-5 py-1.5 text-white rounded-sm font-bold">
+                    <button onClick={() => handlesignOut()}>LogOut</button>
+                </li>
+              </ul>
+            </div>
+          </>
+        )}
       </nav>
     </div>
   );
