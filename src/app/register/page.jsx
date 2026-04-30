@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -73,7 +74,7 @@ const RegisterForm = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-[#1A1D14] tracking-tight">
-            Create Account
+            Registration 
           </h1>
           <p className="text-[#4B635B] text-sm mt-2 opacity-80">
             Begin your journey into modern craftsmanship.
@@ -89,7 +90,7 @@ const RegisterForm = () => {
             </label>
             <input
               type="text"
-              placeholder="Johnathan Doe"
+              placeholder="Enter your name"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
               {...register("name", {
                 required: true,
@@ -110,12 +111,12 @@ const RegisterForm = () => {
             </label>
             <input
               type="text"
-              placeholder="Enter Image URL"
+              placeholder="Enter Photo URL"
               className="w-full bg-[#E8E9DA] border-none rounded-2xl py-4 px-6 text-[#424845] placeholder:text-[#424845]/40 focus:ring-2 focus:ring-[#4B635B]/20 outline-none transition-all mt-1"
               {...register("image", { required: true })}
             />
             {errors.image && (
-              <p className="text-red-500 text-[12px] ml-2">Enter a Image URL</p>
+              <p className="text-red-500 text-[12px] ml-2">Enter a Photo URL</p>
             )}
           </div>
 
@@ -205,9 +206,11 @@ const RegisterForm = () => {
         {/* Footer Link */}
         <p className="text-center text-sm text-[#4B635B] mt-4 opacity-80">
           Already have an account?{" "}
+          <Link href='/login'>
           <button className="font-bold text-[#1A1D14] hover:underline">
-            Sign In
+            Log In
           </button>
+          </Link>
         </p>
       </div>
     </div>

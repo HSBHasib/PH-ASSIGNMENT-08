@@ -10,8 +10,10 @@ const HeroPage = () => {
         src={heroImg}
         alt="Hero Background"
         fill
+        quality={100}
+        priority
         className="object-cover"
-        />
+      />
 
       {/* Content on top */}
       <div className="relative z-10 flex flex-col h-full items-center justify-center space-y-4">
@@ -22,8 +24,10 @@ const HeroPage = () => {
           Discover an curated editorial collection of artisanal surfaces, where
           organic textures meet modern architectural precision.
         </p>
-        <Link href='/all-tiles'>
-          <button className="bg-[#819A91] text-[#081F19] font-bold text-lg px-6 py-3 rounded-lg active:scale-95 cursor-pointer transition-all duration-400">Browse Now</button>
+        <Link href="/all-tiles">
+          <button className="bg-[#819A91] text-[#081F19] font-bold text-lg px-6 py-3 rounded-lg active:scale-95 cursor-pointer transition-all duration-400">
+            Browse Now
+          </button>
         </Link>
       </div>
     </div>

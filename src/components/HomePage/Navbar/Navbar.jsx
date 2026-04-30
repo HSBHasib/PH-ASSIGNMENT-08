@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handlesignOut = async () => {
     await authClient.signOut();
-    router.push('/');
+    router.push("/");
   };
 
   const { data, isPending } = authClient.useSession();
@@ -77,15 +77,24 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <div className="flex items-center gap-3">
-              <Avatar
-                  src={user.image}
-                  name={user?.name?.charAt(0).toUpperCase()}
-                  size="sm"
-                />
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 cursor-pointer rounded-ful hover:scale-110 transition-all duration-500">
+                <Link href="/profile">
+                  <Image
+                    className="rounded-full w-full h-full object-cover"
+                    src={user?.image}
+                    alt="profileImg"
+                    width={100} 
+                    height={100} 
+                    quality={100} 
+                    priority 
+                  />
+                </Link>
+              </div>
+
               <ul className="hidden md:flex items-center gap-3 text-sm font-medium">
                 <li className="bg-[#4B635B] active:scale-95 px-5 py-1.5 text-white rounded-sm font-bold">
-                    <button onClick={() => handlesignOut()}>LogOut</button>
+                  <button onClick={() => handlesignOut()}>LogOut</button>
                 </li>
               </ul>
             </div>
