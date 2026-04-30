@@ -100,7 +100,7 @@ const ProfileUpdatePage = () => {
               onClick={() => router.back()}
               className="w-full cursor-pointer bg-[#7E968B] hover:bg-[#6D857A] text-white font-semibold text-lg py-4 rounded-2xl shadow-lg transition-all active:scale-[0.98] mt-4"
             >
-              Cencel
+              Back
             </button>
             <button
               type="submit"
