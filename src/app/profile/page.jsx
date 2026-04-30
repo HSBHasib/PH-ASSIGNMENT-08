@@ -4,16 +4,27 @@ import Image from "next/image";
 import { MdOutlineEdit } from "react-icons/md";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
+import { RxCross2 } from "react-icons/rx";
+import { useRouter } from "next/navigation";
+
 
 
 const ProfilePage = () => {
   const { data, isPending } = authClient.useSession();
   const user = data?.user;
 
+  const router = useRouter()
+
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4">
       {/* Profile Card */}
-      <div className="w-full max-w-2xl border-[5px] border-[#E8E9DA] bg-[#EEEFE0] rounded-[3rem] p-10 md:py-15 shadow-xl flex flex-col md:flex-row items-center gap-8">
+      <div className="relative w-full max-w-2xl border-[5px] border-[#E8E9DA] bg-[#EEEFE0] rounded-[3rem] p-10 md:py-15 shadow-xl flex flex-col md:flex-row items-center gap-8">
+        {/* Cros icon */}
+        <div onClick={() => router.back()} className="absolute right-4 top-4 bg-[#F1F3E9] hover:bg-[#EFF1E4] border-2 border-[#E8E9DA] p-1.5 rounded-full hover:scale-110 duration-500 active:scale-95 cursor-pointer">
+          <RxCross2 size="18" />
+        </div>
+
+        {/* Image */}
         <div className="relative group">
           <div className="border-6 border-[#DCE1D4] rounded-full">
             <div className="w-48 h-48 rounded-full overflow-hidden border-5 border-[#EEEFE0] shadow-inner">
