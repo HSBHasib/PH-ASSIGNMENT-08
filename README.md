@@ -15,15 +15,12 @@ live URL: https://ph-assignment-08-nu.vercel.app/
 
 -------------------------------------------------
 
-Technology what i use: 
+NPM Package what i use: 
 NextJS
 SwiperJs
-MongoDB Atlas
 BetterAuth
-proxy
-Tailwind CSS, HeroUI
-JavaScript (ES6+)
-React-Toastify (NPM Package)
+HeroUI
+React-Toastify ()
 JSON Server
 React icons
 lucide react
