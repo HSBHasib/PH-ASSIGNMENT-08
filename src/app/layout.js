@@ -9,7 +9,7 @@ const interFont = Inter({
 });
 
 export const metadata = {
-  title: "Tiles Gellary",
+  title: "Tiles Gallery",
   description: "Tiles Gellary is one the best bangladesh tiles brand",
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${interFont.variable} h-full antialiased`}
+      className={`${interFont.className} h-full antialiased`}
     >
       <body className="max-w-300 mx-auto min-h-full flex flex-col">
         <Navbar />

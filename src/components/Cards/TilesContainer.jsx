@@ -3,9 +3,8 @@
 import React, { useState } from "react";
 import TilesCardPage from "@/components/Cards/TilesCard";
 import { IoSearchSharp } from "react-icons/io5";
-import Link from "next/link";
 
-const TilesContainer = ({ initialTiles, filteredTilesCat }) => {
+const TilesContainer = ({ initialTiles }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredTiles = initialTiles.filter((tile) =>
@@ -14,8 +13,8 @@ const TilesContainer = ({ initialTiles, filteredTilesCat }) => {
 
   return (
     <>
-      <div className="my-4">
-        {/* Searching by title */}
+      <div className="mt-4 -mb-4">
+        {/* Searching by title  */}
         <div className="w-full flex flex-col items-center px-4">
           <div className="max-w-xl md:w-2xl mb-10">
             <div className="flex items-center  bg-[##EFF0E1] rounded-full p-2 pl-6 shadow-sm border border-black/5">
@@ -32,15 +31,14 @@ const TilesContainer = ({ initialTiles, filteredTilesCat }) => {
             </div>
           </div>
 
-
-          {/* Category btns*/}
-          <div className="flex flex-wrap items-center justify-center w-full gap-4 ">
+          {/* Category btns - This feature is not mentioned in the assignment requirements. */}
+          {/* <div className="flex flex-wrap items-center justify-center w-full gap-4 ">
             <Link href="/all-tiles">
-              {/* <button
+              <button
                 className={`px-6 py-1.5 bg-[#D4E4D4] transition] rounded-full duration-500 text-sm font-medium text-[#424845]`}
               >
                 All Category
-              </button> */}
+              </button>
             </Link>
             {initialTiles.map((cat, idx) => (
               <Link key={idx} href={`?category=${cat.category}`}>
@@ -51,14 +49,15 @@ const TilesContainer = ({ initialTiles, filteredTilesCat }) => {
                 </button>
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Tiles Card */}
       <div className="pt-5 pb-10 px-4 md:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <TilesCardPage tiles={filteredTiles} filteredTilesCat={filteredTilesCat} searchTerm={searchTerm} />
+          {/* tiles={filteredTilesCat} */}
+          <TilesCardPage tiles={filteredTiles} searchTerm={searchTerm} />
         </div>
       </div>
     </>
