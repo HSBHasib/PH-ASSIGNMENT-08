@@ -33,8 +33,11 @@ lucide react
 Features about my project.
 1. Search Functionality – Users can easily search and find specific tiles.
 2. Tile Details View – Each tile has a dedicated details page with details information.
-3. User Profile Management – After login, a profile card is created with email and image and a random meaningful paragram, and users can update their name and profile picture.
-4. Hero Section Image Slider (Swiper.js) – Autoplay image slider is used in hero section, where images automatically change.
+3. User Profile Management – After login,
+a profile card is created with email and image and a random meaningful paragram,
+and users can update their name and profile picture.
+4. Hero Section Image Slider (Swiper.js) –
+Autoplay image slider is used in hero section, where images automatically change.
 
 
 ```
