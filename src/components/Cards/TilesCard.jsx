@@ -18,7 +18,7 @@ const TilesCardPage = ({ tiles, searchTerm }) => {
                 src={tile.image}
                 alt={tile.title}
                 fill
-                className="object-contain transition-transform duration-1000 hover:scale-110"
+                className="object-contain transition-transform rounded-3xl duration-1000 hover:scale-110"
               />
             </div>
 
