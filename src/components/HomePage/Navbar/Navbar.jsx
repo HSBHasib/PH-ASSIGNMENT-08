@@ -123,7 +123,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-2">
                 <Link
                   href="/login"
-                  className="border p-2 text-center rounded-lg"
+                  className="bg-[#819A9199] p-2 rounded-lg text-center font-bold mr-3"
                 >
                   LogIn
                 </Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
                   handlesignOut();
                   setIsOpen(false);
                 }}
-                className="bg-[#819A9198] p-2 rounded-lg text-center font-bold mr-3"
+                className="bg-[#819A9199] p-2 rounded-lg text-center font-bold mr-3"
               >
                 Log Out
               </button>
