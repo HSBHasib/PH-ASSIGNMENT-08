@@ -1,9 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
 import { BsTwitterX } from "react-icons/bs";
-
+import { RiInstagramFill } from "react-icons/ri";
+import { IoLocationSharp } from "react-icons/io5";
+import { MdCall, MdEmail } from "react-icons/md";
+import { PiPhoneCallDuotone } from "react-icons/pi";
 
 const Footer = () => {
   return (
@@ -19,35 +22,6 @@ const Footer = () => {
               Curating artisanal surfaces where organic textures meet modern
               architectural precision.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="col-span-1">
-            <h3 className="text-[16px] font-bold uppercase tracking-[0.1em] mb-3">
-              Collections
-            </h3>
-            <ul className="space-y-3 text-sm font-medium">
-              <li>
-                <Link href="/" className="hover:opacity-60 transition-opacity">
-                  Carrara Classic
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:opacity-60 transition-opacity">
-                  Azure Mosaic
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:opacity-60 transition-opacity">
-                  Desert Clay
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:opacity-60 transition-opacity">
-                  Nordic Slate
-                </Link>
-              </li>
-            </ul>
           </div>
 
           {/* Company */}
@@ -79,25 +53,77 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Socail Links */}
+          <div className="col-span-1">
+            <h3 className="text-[16px] font-bold uppercase tracking-[0.1em] mb-3">
+              Socail Links
+            </h3>
+            <ul className="space-y-3 text-sm font-medium">
+              <li>
+                <Link
+                  href="https://www.facebook.com/"
+                  className="hover:opacity-60 transition-opacity flex gap-2"
+                >
+                  <FaFacebook size={18} /> Facebook
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.instagram.com/"
+                  className="hover:opacity-60 transition-opacity flex gap-2"
+                >
+                  <RiInstagramFill size={19} />
+                  Instagram
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.linkedin.com/"
+                  className="hover:opacity-60 transition-opacity flex gap-2 pl-0.5"
+                >
+                  <ImLinkedin size={17} />
+                  Linkedin
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://x.com/"
+                  className="hover:opacity-60 transition-opacity flex gap-2 pl-0.5"
+                >
+                  <BsTwitterX size={17} />
+                  Twitter
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Us Section */}
           <div className="col-span-1">
             <h3 className="text-[16px] font-bold uppercase tracking-[0.1em] mb-3">
               Contact Us
             </h3>
-            <div className="text-sm flex gap-6">
-              <div className="flex items-start space-x-3">
-                <Link href='https://www.facebook.com/'>
-                  <FaFacebook size={24}/>
-                </Link>
+            <div className="text-sm flex flex-col gap-3">
+              <div className="flex items-center gap-1">
+                <MdEmail size={20} />
+                <p className="font-semibold text-xs hover:underline">
+                  hasibhsb19@gmail.com
+                </p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Link href='https://www.linkedin.com/'>
-                  <ImLinkedin size={22}/>
-                </Link>
+              <div className="flex items-center gap-1">
+                <MdCall size={20} />
+                <p className="font-semibold text-xs hover:underline">
+                  01616891871
+                </p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Link href='https://x.com/'>
-                  <BsTwitterX size={22}/>
+              <div>
+                <Link
+                  className="flex items-center gap-1"
+                  href="https://www.google.com/maps/search/tongi+station+road/@23.8935337,90.4020176,313m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
+                >
+                  <IoLocationSharp size={21} />
+                  <p className="font-semibold text-xs hover:underline">
+                    Tongi, Gazipur, Bangladesh.
+                  </p>
                 </Link>
               </div>
             </div>
