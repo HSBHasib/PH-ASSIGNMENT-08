@@ -20,7 +20,7 @@ NextJS
 SwiperJs
 BetterAuth
 HeroUI
-React-Toastify ()
+React-Toastify
 JSON Server
 React icons
 lucide react
