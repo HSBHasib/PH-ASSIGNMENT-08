@@ -30,26 +30,6 @@ const TilesContainer = ({ initialTiles }) => {
               </button>
             </div>
           </div>
-
-          {/* Category btns - This feature is not mentioned in the assignment requirements. */}
-          {/* <div className="flex flex-wrap items-center justify-center w-full gap-4 ">
-            <Link href="/all-tiles">
-              <button
-                className={`px-6 py-1.5 bg-[#D4E4D4] transition] rounded-full duration-500 text-sm font-medium text-[#424845]`}
-              >
-                All Category
-              </button>
-            </Link>
-            {initialTiles.map((cat, idx) => (
-              <Link key={idx} href={`?category=${cat.category}`}>
-                <button
-                  className={`px-6 py-1.5 rounded-full text-sm font-medium bg-[#E8E9DA] text-[#424845] hover:bg-[#D4E4D4] transition-all hover:scale-105 duration-500`}
-                >
-                  {cat.category}
-                </button>
-              </Link>
-            ))}
-          </div> */}
         </div>
       </div>
 

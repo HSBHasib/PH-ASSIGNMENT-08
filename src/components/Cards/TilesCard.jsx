@@ -4,6 +4,7 @@ import React from "react";
 import NoResults from "../NoResults";
 
 const TilesCardPage = ({ tiles, searchTerm }) => {
+  
   return (
     <>
       {tiles?.length > 0 ? (

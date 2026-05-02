@@ -18,18 +18,10 @@ const Navbar = () => {
     router.push("/");
   };
 
-  const { data, isPending } = authClient.useSession();
+  const { data } = authClient.useSession();
   const user = data?.user;
 
   const [isOpen, setIsOpen] = useState(false);
-
-  if (isPending) {
-    return (
-      <div className="flex h-screen items-center justify-center">
-        <span className="animate-spin rounded-full h-10 w-10 border-t-3 border-b-3 border-[#4B635B]"></span>
-      </div>
-    );
-  }
 
   return (
     <div className="mt-4 mb-7 bg-[#D1D8BE30] text-[#424845] shadow-sm px-7 py-2.5 rounded-2xl">
