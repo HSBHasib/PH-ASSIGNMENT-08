@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <h2 className="text-2xl font-bold tracking-tighter mb-3">
-              Tiles Gallery
+              Tiles Gellary
             </h2>
             <p className="text-sm leading-relaxed max-w-[80%]">
               Curating artisanal surfaces where organic textures meet modern

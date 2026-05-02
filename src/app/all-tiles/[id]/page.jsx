@@ -55,10 +55,10 @@ const SingleTailsDetailsPage = async ({ params }) => {
           {/* Tags Section */}
           <div className="flex flex-wrap gap-3 pl-2 -mt-2">
             <span className="px-6 py-2 bg-[#E8E9DA] rounded-full text-xs font-bold uppercase tracking-widest border border-black/5">
-              Handmade
+              {material}
             </span>
             <span className="px-6 py-2 bg-[#E8E9DA] rounded-full text-xs font-bold uppercase tracking-widest border border-black/5">
-              {material}
+              Handmade
             </span>
             <span className="px-6 py-2 bg-[#E8E9DA] rounded-full text-xs font-bold uppercase tracking-widest border border-black/5">
               Eco-Glaze
