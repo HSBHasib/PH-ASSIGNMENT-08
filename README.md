@@ -50,17 +50,17 @@ Tiles Gallery is a dedicated web application designed to showcase a modern curat
 * Showcases the top 4 featured premium tiles fetched directly from the JSON server database structure.
 
 ### 🔍 Search Bar & Gallery
-* A clean "All Tiles" gallery layout integrated with a large, interactive HeroUI-styled search input at the top.
+* A clean "All Tiles" gallery layout integrated with a large, interactive HeroUI styled search input at the top.
 * Filter and search through the entire collection dynamically by tile title instantly without any page crashes.
 
-### 🖼️ Two-Column Single Tile Details
+### 🖼️ Two Column Single Tile Details
 * Beautiful, responsive layout featuring a large high-resolution tile preview on the left alongside detailed specs (category, price, dimensions, material) on the right.
 
 ### 🔐 Secure Authentication Framework
-* Fully powered by BetterAuth using a secure MongoDB adapter. Features custom Login/Register routes and a single-tap **Google Social Authentication** system that handles redirection perfectly even on hard page reloads.
+* Fully powered by BetterAuth using a secure MongoDB adapter. Features custom Login/Register routes and a single tap **Google Social Authentication** system that handles redirection perfectly even on hard page reloads.
 
 ### 👨‍💻 Challenge: My Profile Management & Updates
-* Access to a private profile dashboard showing logged-in session data.
+* Access to a private profile dashboard showing logged in session data.
 * Includes an asynchronous information updating route to instantly refresh the user's display name and profile image URL via BetterAuth APIs without breaking UX.
 
 ---
