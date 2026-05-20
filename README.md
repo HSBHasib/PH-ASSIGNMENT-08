@@ -12,7 +12,7 @@ Tiles Gallery is a dedicated web application designed to showcase a modern curat
 ## 🔗 Links
 
 * 🌐 **Live Site:** [View Live Site](https://ph-assignment-08-nu.vercel.app/)
-* 💻 **GitHub Repo:** [View Github Repo](https://github.com/HSBHasib/PH-ASSIGNMENT-08)
+* 💻 **GitHub Repo:** [View Github Repo](https://github.com/HSBHasib/Tiles-Gallery-A8)
 
 ---
 
@@ -69,10 +69,10 @@ Tiles Gallery is a dedicated web application designed to showcase a modern curat
 
 ```bash
 # Clone the repository
-git clone [ https://github.com/HSBHasib/PH-ASSIGNMENT-08.git ]
+git clone [ https://github.com/HSBHasib/Tiles-Gallery-A8.git ]
 
 # Go into the project folder
-cd PH-ASSIGNMENT-08
+cd Tiles-Gallery-A8
 
 # Setup your Environment Variables (.env)
 # BETTER_AUTH_SECRET=your_secret
