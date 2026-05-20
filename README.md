@@ -11,7 +11,7 @@ Tiles Gallery is a dedicated web application designed to showcase a modern curat
 
 ## 🔗 Links
 
-* 🌐 **Live Site:** [View Live Site](https://ph-assignment-08-nu.vercel.app/)
+* 🌐 **Live Site:** [View Live Site](https://tilesgallery-gbpq6kw46-hsbhasi.vercel.app/)
 * 💻 **GitHub Repo:** [View Github Repo](https://github.com/HSBHasib/Tiles-Gallery-A8)
 
 ---
